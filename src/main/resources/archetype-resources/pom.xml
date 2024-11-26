@@ -13,31 +13,36 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.8.0</version>
                 <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>11</source>
+                    <target>11</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>2.4.3</version>
+                <version>3.3.1</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.mortbay.jetty</groupId>
+                <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty.version}</version>
                 <configuration>
-                     <reload>manual</reload>
+                    <reload>manual</reload>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.apache.click</groupId>
+            <artifactId>click</artifactId>
+            <version>${click.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.click</groupId>
             <artifactId>click-extras</artifactId>
@@ -57,16 +62,16 @@
         </dependency>        
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
             <version>${servlet-api.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
     <properties>
         <!-- versions -->
-        <click.version>2.3.0</click.version>
-        <servlet-api.version>[2.,)</servlet-api.version>
-        <jetty.version>7.6.3.v20120416</jetty.version>
+        <click.version>2.4.0</click.version>
+        <servlet-api.version>[3.1,)</servlet-api.version>
+        <jetty.version>9.4.56.v20240826</jetty.version>
         <junit.version>[4.,)</junit.version>
     </properties>
 </project>
