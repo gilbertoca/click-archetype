@@ -4,7 +4,7 @@ Create a project NOW using the remote repository
 
  mvn archetype:create -DarchetypeGroupId=com.gilbertoca.archetypes \
     -DarchetypeArtifactId=click-archetype \
-    -DarchetypeVersion=1.1-SNAPSHOT \
+    -DarchetypeVersion=1.2-SNAPSHOT \
     -DremoteRepositories=http://github.com/gilberoca/maven2/ \
     -DgroupId=myGroupId \
     -DartifactId=myArtifactId    
@@ -18,7 +18,7 @@ Then install it into your local repository:
  mvn install:install-file \
    -DarchetypeGroupId=com.gilbertoca.archetypes \
    -DarchetypeArtifactId=click-archetype \
-   -DarchetypeVersion=1.1-SNAPSHOT \
+   -DarchetypeVersion=1.2-SNAPSHOT \
    -Dpackaging=jar 
    -Dfile=PATH_TO_JAR_YOU_DOWNLOADED/click-archetype-1.1-SNAPSHOT.jar
 
@@ -38,7 +38,7 @@ Once you have access to the archetype, you use it as you would any other Maven a
 mvn archetype:generate \
    -DarchetypeGroupId=com.gilbertoca.archetypes \
    -DarchetypeArtifactId=click-archetype \
-   -DarchetypeVersion=1.1-SNAPSHOT \
+   -DarchetypeVersion=1.2-SNAPSHOT \
    -DgroupId=com.mycompany \
    -DartifactId=starweb \
    -DarchetypeCatalog=local
